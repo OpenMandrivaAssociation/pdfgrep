@@ -1,7 +1,7 @@
 Name:           pdfgrep
 Summary:	search in pdf files for strings matching a regular expression
-Version:        1.1
-Release:        %mkrel 1
+Version:        1.2
+Release:        2
 Source0:        http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.tar.gz
 URL:            http://pdfgrep.sourceforge.net/
 Group:          Text tools
