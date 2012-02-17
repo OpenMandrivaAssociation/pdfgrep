@@ -1,13 +1,13 @@
 Name:           pdfgrep
 Summary:	search in pdf files for strings matching a regular expression
-Version:        1.2
-Release:        2
+Version:        1.3.0
+Release:        1
 Source0:        http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.tar.gz
 URL:            http://pdfgrep.sourceforge.net/
 Group:          Text tools
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPLv3
 BuildRequires:	libpoppler-devel
+BuildRequires:	pkgconfig(poppler-cpp)
 
 %description
 Pdfgrep is a tool to search text in PDF files. It works similar to grep.
@@ -28,11 +28,7 @@ Features:
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(0755,root,root)
