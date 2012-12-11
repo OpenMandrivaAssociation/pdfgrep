@@ -35,3 +35,23 @@ Features:
 %doc README NEWS COPYING AUTHORS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
+
+
+%changelog
+* Fri Feb 17 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.3.0-1
++ Revision: 775939
+- version update 1.3..0
+
+* Tue Aug 02 2011 Alexandre Lissy <alissy@mandriva.com> 1.2-2
++ Revision: 692833
+- Updating to 1.2
+
+* Fri Mar 11 2011 Funda Wang <fwang@mandriva.org> 1.1-1
++ Revision: 643742
+- update br
+
+* Thu Feb 24 2011 Alexandre Lissy <alissy@mandriva.com> 1.1-0
++ Revision: 639702
+- Initial import of pdfgrep
+- Created package structure for pdfgrep.
+
