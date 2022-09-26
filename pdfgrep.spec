@@ -1,8 +1,9 @@
 Name:           pdfgrep
 Summary:	search in pdf files for strings matching a regular expression
-Version:        1.3.0
-Release:        2
+Version:        1.3.2
+Release:        1
 Source0:        http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.tar.gz
+Patch0:		pdfgrep-1.3.2-compile.patch
 URL:            http://pdfgrep.sourceforge.net/
 Group:          Text tools
 License:	GPLv3
@@ -21,37 +22,19 @@ Features:
  * and the most important feature: color output!
 
 %prep
-%setup -q
+%autosetup -p1
+%configure
 
 %build
-%configure2_5x
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %defattr(0755,root,root)
 %doc README NEWS COPYING AUTHORS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
-
-
-%changelog
-* Fri Feb 17 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.3.0-1
-+ Revision: 775939
-- version update 1.3..0
-
-* Tue Aug 02 2011 Alexandre Lissy <alissy@mandriva.com> 1.2-2
-+ Revision: 692833
-- Updating to 1.2
-
-* Fri Mar 11 2011 Funda Wang <fwang@mandriva.org> 1.1-1
-+ Revision: 643742
-- update br
-
-* Thu Feb 24 2011 Alexandre Lissy <alissy@mandriva.com> 1.1-0
-+ Revision: 639702
-- Initial import of pdfgrep
-- Created package structure for pdfgrep.
-
+%{_datadir}/bash-completion/completions/pdfgrep
+%{_datadir}/zsh/site-functions/_pdfgrep
