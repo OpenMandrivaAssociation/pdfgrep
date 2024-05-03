@@ -1,10 +1,12 @@
 Name:           pdfgrep
 Summary:	search in pdf files for strings matching a regular expression
-Version:        1.3.2
+Version:        2.2.0
 Release:        1
-Source0:        http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.tar.gz
-Patch0:		pdfgrep-1.3.2-compile.patch
-URL:            http://pdfgrep.sourceforge.net/
+Source0:        https://pdfgrep.org/download/pdfgrep-%{version}.tar.gz
+#Patch0:		pdfgrep-1.3.2-compile.patch
+Url:		https://pdfgrep.org/
+#Also:		http://pdfgrep.sourceforge.net/
+#		https://gitlab.com/pdfgrep/pdfgrep.git
 Group:          Text tools
 License:	GPLv3
 BuildRequires:	libpoppler-devel
@@ -33,7 +35,7 @@ Features:
 
 %files
 %defattr(0755,root,root)
-%doc README NEWS COPYING AUTHORS
+%doc COPYING AUTHORS
 %{_mandir}/man1/%{name}.1*
 %{_bindir}/%{name}
 %{_datadir}/bash-completion/completions/pdfgrep
