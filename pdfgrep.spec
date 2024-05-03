@@ -9,7 +9,6 @@ Url:		https://pdfgrep.org/
 #		https://gitlab.com/pdfgrep/pdfgrep.git
 Group:          Text tools
 License:	GPLv3
-BuildRequires:	libpoppler-devel
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(poppler-cpp)
 
