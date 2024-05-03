@@ -11,6 +11,7 @@ Group:          Text tools
 License:	GPLv3
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(poppler-cpp)
+BuildRequires:	pkgconfig(libpcre2-8)
 
 %description
 Pdfgrep is a tool to search text in PDF files. It works similar to grep.
